@@ -3,10 +3,10 @@
 import { auth } from "@clerk/nextjs/server";
 import { db } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
-// import { GoogleGenerativeAI } from "@google/generative-ai";
-// import aj from "@/lib/arcjet";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import aj from "@/lib/arcjet";
 
-// const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const serializeAmount = (obj) => ({
   ...obj,
